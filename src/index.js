@@ -7,13 +7,6 @@ const Me = [
     name: "Leul Abera ",
     aboutMe:
       "I'm a Software Engineer and Full Stack Web Developer. In my free timeenjoy playing chess, singing, and playing the piano.",
-    HTML: "HTMl",
-    CSS: "Css",
-    JS: "Js",
-    web: "web Desing",
-    git: "git and GitHub",
-    React: "React",
-    servelte: "servelt",
   },
 ];
 
@@ -48,8 +41,8 @@ function Intro(props) {
 function SkillList() {
   return (
     <div>
-      <Skill skill="React" emoji="👍" color="#123456" />
-      <Skill skill="HTML and CSS" emoji="💪" color="orangered" />
+      <Skill skill="React" emoji="👍" color="blue" />
+      <Skill skill="HTML and CSS" emoji="💪" color="orange" />
       <Skill skill="JavaScript" emoji="👌" color="yellow" />
       <Skill skill="Svelte" emoji="😒" color="orange" />
     </div>
