@@ -20,32 +20,24 @@ const Me = [
 function App() {
   return (
     <div className="card">
-      <Avatar />
+      <Avatar photoname="./asset/fun.jpg" />
       <div className="data">
         <Intro
           name="Leul Abera "
           aboutMe="I'm a Software Engineer and Full Stack Web Developer. In my free timeenjoy playing chess, singing, and playing the piano"
         />
-        <SkillList
-          HTML="HTMl"
-          CSS="Css"
-          JS="Js"
-          web="web Desing"
-          git="git and GitHub"
-          React="React"
-          serviette="servelt"
-        />
+        <SkillList />
       </div>
     </div>
   );
 }
-function Avatar() {
-  return <img className="avatar" src="./asset/le.jpg" />;
+function Avatar(props) {
+  return <img className="avatar" src={props.photoname} />;
 }
 function Intro(props) {
   return (
     <div>
-      <h1 className=""> {props.name} </h1>
+      <h1> {props.name} </h1>
       <p>
         I'm a Software Engineer and Full Stack Web Developer. In my free time, I
         enjoy playing chess, singing, and playing the piano.
@@ -53,28 +45,23 @@ function Intro(props) {
     </div>
   );
 }
-function SkillList(props) {
+function SkillList() {
   return (
-    <ul className="skill-list">
-      <li id="html" className="skill">
-        {props.HTML} 👍
-      </li>
-      <li id="js" className="skill">
-        {props.JS}❤️
-      </li>
-      <li id="web" className="skill">
-        {props.web} 👌
-      </li>
-      <li id="git" className="skill">
-        {props.git} 👍
-      </li>
-      <li id="react" className="skill">
-        {props.React} 👍
-      </li>
-      <li id="se" className="skill">
-        {props.SkillList}😒
-      </li>
-    </ul>
+    <div>
+      <Skill skill="React" emoji="👍" color="#123456" />
+      <Skill skill="HTML and CSS" emoji="💪" color="orangered" />
+      <Skill skill="JavaScript" emoji="👌" color="yellow" />
+      <Skill skill="Svelte" emoji="😒" color="orange" />
+    </div>
+  );
+}
+
+function Skill(props) {
+  return (
+    <div className="skill" style={{ backgroundColor: props.color }}>
+      <span>{props.skill}</span>
+      <span>{props.emoji} </span>
+    </div>
   );
 }
 
